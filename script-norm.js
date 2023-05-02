@@ -1,27 +1,27 @@
 // 1. Запитай у користувача п’ятирозрядне число і визначи, чи є воно паліндромом.
-// function isPalindrom(number) {
-//   if (isNaN(number) || number < 10000 || number > 99999) {
-//     console.log("Enter five-digit integer.");
-//   } else {
-//     number = number.toString();
+function isPalindrom(number) {
+  if (isNaN(number) || number < 10000 || number > 99999) {
+    console.log("Enter five-digit integer.");
+  } else {
+    number = number.toString();
 
-//     let reverse = "";
+    let reverse = "";
 
-//     for (const num of number) {
-//       reverse = reverse + num;
-//     }
+    for (const num of number) {
+      reverse = num + reverse;
+    }
 
-//     console.log(reverse);
+    console.log(reverse);
 
-//     if (reverse === number) {
-//       console.log("The number is palindrom.");
-//     } else {
-//       console.log("The number isn't palindrom.");
-//     }
-//   }
-// }
+    if (reverse === number) {
+      console.log("The number is palindrom.");
+    } else {
+      console.log("The number isn't palindrom.");
+    }
+  }
+}
 
-// isPalindrom(33333);
+isPalindrom(33331);
 
 // -----------------------------------------------------------------------------------------------------------------------------------------
 // 2. Запитай у користувача суму покупки і виведи суму до оплати зі знижкою:
@@ -34,6 +34,7 @@
 //     console.log(`Enter correct sum.`);
 //   } else {
 //     let discount = "";
+//     let sum = 0;
 
 //     if (amount < 200 && amount > 0) {
 //       discount = "0";
@@ -61,42 +62,42 @@
 // При цьому також порахуй, скільки з них парних і непарних. Виведи статистику на екран.
 // Враховуй, що достатньо однієї змінної (не 10) для введення чисел користувачем.
 
-function getTypeOfNumber(array) {
-  positive = 0;
-  negative = 0;
-  even = 0;
-  odd = 0;
-  zeros = 0;
-  decimal = 0;
+// function getTypeOfNumber(array) {
+//   positive = 0;
+//   negative = 0;
+//   even = 0;
+//   odd = 0;
+//   zeros = 0;
+//   decimal = 0;
 
-  for (let index = 0; index < 10; index++) {
-    if (array[index] > 0) {
-      positive++;
+//   for (let index = 0; index < 10; index++) {
+//     if (array[index] > 0) {
+//       positive++;
 
-      if (array[index] % 2 === 0) {
-        even++;
-      } else if (array[index] % 2 === 1) {
-        odd++;
-      } else {
-        decimal++;
-      }
-    } else if (array[index] < 0) {
-      negative++;
+//       if (array[index] % 2 === 0) {
+//         even++;
+//       } else if (array[index] % 2 === 1) {
+//         odd++;
+//       } else {
+//         decimal++;
+//       }
+//     } else if (array[index] < 0) {
+//       negative++;
 
-      if (array[index] % 2 === 0) {
-        even++;
-      } else if (array[index] % 2 === -1) {
-        odd++;
-      } else {
-        decimal++;
-      }
-    } else {
-      zeros++;
-    }
-  }
-  console.log(
-    `We have ${positive} positive, ${negative} negative, ${zeros} zero, ${even} even, ${odd} odd, ${decimal} decimal numbers.`
-  );
-}
+//       if (array[index] % 2 === 0) {
+//         even++;
+//       } else if (array[index] % 2 === -1) {
+//         odd++;
+//       } else {
+//         decimal++;
+//       }
+//     } else {
+//       zeros++;
+//     }
+//   }
+//   console.log(
+//     `We have ${positive} positive, ${negative} negative, ${zeros} zero, ${even} even, ${odd} odd, ${decimal} decimal numbers.`
+//   );
+// }
 
-getTypeOfNumber([1, 1, 4, 5, 6, -1, 0, 0, 0, -0.25]);
+// getTypeOfNumber([1, 1, 4, 5, 6, -1, 0, 0, 0, -0.25]);

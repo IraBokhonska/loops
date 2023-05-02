@@ -1,21 +1,21 @@
 // 1.Запитай у користувача його вік і визначи, ким він є: дитиною (0-11), підлітком (12-17),
 // дорослим (18_59) або пенсіонером (60 ...), передбач можливість введення невірних даних.
 
-function getAgeGroup(age) {
-  if (age >= 0 && age <= 11) {
-    console.log("You are child.");
-  } else if (age <= 17) {
-    console.log("You are teenager.");
-  } else if (age <= 59) {
-    console.log("You are adult.");
-  } else if (age <= 122) {
-    console.log("You are pensioner.");
-  } else {
-    console.log("Enter correct age.");
-  }
-}
+// function getAgeGroup(age) {
+//   if (age >= 0 && age <= 11) {
+//     console.log("You are child.");
+//   } else if (age <= 17) {
+//     console.log("You are teenager.");
+//   } else if (age <= 59) {
+//     console.log("You are adult.");
+//   } else if (age <= 122) {
+//     console.log("You are pensioner.");
+//   } else {
+//     console.log("Enter correct age.");
+//   }
+// }
 
-getAgeGroup(17);
+// getAgeGroup(17);
 
 // або краще так
 // function getAgeGroup(age) {
@@ -94,13 +94,17 @@ getAgeGroup(17);
 // 3. Підрахуй суму всіх чисел в заданому користувачем діапазоні.
 
 function caculateSumOfNumbersRange(minNumber, maxNumber) {
-  sum = 0;
-  if (
+  let sum = 0;
+
+  const numbersRange =
     maxNumber >= minNumber &&
     maxNumber % 1 === 0 &&
     minNumber % 1 === 0 &&
-    minNumber !== maxNumber
-  ) {
+    minNumber !== maxNumber;
+
+  console.log(numbersRange);
+
+  if (numbersRange === true) {
     for (let index = minNumber; index <= maxNumber; index++) {
       sum += index;
     }
@@ -140,19 +144,19 @@ caculateSumOfNumbersRange(1, 6);
 
 // 5.Запитай у користувача число і виведи всі дільники цього числа.
 
-function getDivisors(someNumber) {
-  if (isNaN(someNumber)) {
-    console.log("Enter number");
-  } else {
-    let gcd = 1;
+// function getDivisors(someNumber) {
+//   if (isNaN(someNumber)) {
+//     console.log("Enter number");
+//   } else {
+//     let gcd = 1;
 
-    for (let index = 1; index <= someNumber; index++) {
-      if (someNumber % index === 0) {
-        gcd = index;
-        console.log(gcd);
-      }
-    }
-  }
-}
+//     for (let index = 1; index <= someNumber; index++) {
+//       if (someNumber % index === 0) {
+//         gcd = index;
+//         console.log(gcd);
+//       }
+//     }
+//   }
+// }
 
-getDivisors(10);
+// getDivisors(10);
